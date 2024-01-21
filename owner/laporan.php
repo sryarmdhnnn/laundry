@@ -22,13 +22,7 @@ WHERE transaksi.status_bayar = 'dibayar' AND paket.outlet_id = '$outlet_id' GROU
                 <li><a href="#">Dashboard</a></li>
             </ol>
         </div>
-        <!-- /.col-lg-12 -->
     </div>
-    <!-- /.row -->
-    <!-- ============================================================== -->
-    <!-- Different data widgets -->
-    <!-- ============================================================== -->
-    <!-- .row -->
     <div class="row">
         <div class="col-lg-4 col-sm-6 col-xs-12">
             <div class="white-box analytics-info">

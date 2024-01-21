@@ -1,12 +1,6 @@
 <?php
 session_start();
-$host = 'localhost';
-$user = 'root';
-$password = ' ';
-$database = 'laundry';
-
-$conn = mysqli_connect($host, $user, $password, $database);
-
+$conn = mysqli_connect('localhost', 'root', '', 'laundry');
 
 $username = stripslashes($_POST['username']);
 $password = md5($_POST['password']);
@@ -22,7 +16,7 @@ if($cek > 0){
         $_SESSION['username'] = $data['username'];
         $_SESSION['user_id'] = $data['id_user'];
         $_SESSION['outlet_id'] = $data['outlet_id'];
-        header('location:admin');
+        header('location:admin/index.php');
     }else if($data['role'] == 'kasir'){
         $_SESSION['role'] = 'kasir';
         $_SESSION['username'] = $data['username'];
