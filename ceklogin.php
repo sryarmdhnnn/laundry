@@ -16,7 +16,7 @@ if($cek > 0){
         $_SESSION['username'] = $data['username'];
         $_SESSION['user_id'] = $data['id_user'];
         $_SESSION['outlet_id'] = $data['outlet_id'];
-        header('location:admin/index.php');
+        header('location:admin');
     }else if($data['role'] == 'kasir'){
         $_SESSION['role'] = 'kasir';
         $_SESSION['username'] = $data['username'];

@@ -29,8 +29,6 @@ html {
   height: 100%;
   font-family: Poppins-Regular, sans-serif;
 }
-
-/*---------------------------------------------*/
 a {
   font-family: Poppins-Regular;
   font-size: 14px;
@@ -51,8 +49,6 @@ a:hover {
   text-decoration: none;
   color: #36a0ca;
 }
-
-/*---------------------------------------------*/
 h1,
 h2,
 h3,
@@ -75,8 +71,6 @@ li {
   margin: 0px;
   list-style-type: none;
 }
-
-/*---------------------------------------------*/
 input {
   outline: none;
   border: none;
@@ -174,18 +168,12 @@ button:hover {
 iframe {
   border: none !important;
 }
-
-/*//////////////////////////////////////////////////////////////////
-[ Utility ]*/
 .txt1 {
   font-family: Poppins-Regular;
   font-size: 13px;
   line-height: 1.4;
   color: #999999;
 }
-
-/*//////////////////////////////////////////////////////////////////
-[ login ]*/
 
 .limiter {
   width: 100%;
@@ -215,8 +203,6 @@ iframe {
   position: relative;
 }
 
-/*==================================================================
-[ Title form ]*/
 .login100-form-title {
   width: 100%;
   position: relative;
@@ -255,11 +241,8 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 170, 255, 0.7);
+  background-color: rgba(161, 161, 161, 0.7);
 }
-
-/*==================================================================
-[ Form ]*/
 
 .login100-form {
   width: 100%;
@@ -273,9 +256,6 @@ iframe {
   padding: 43px 88px 93px 190px;
 }
 
-/*------------------------------------------------------------------
-[ Input ]*/
-
 .wrap-input100 {
   width: 100%;
   position: relative;
@@ -285,7 +265,7 @@ iframe {
 .label-input100 {
   font-family: Poppins-Regular;
   font-size: 15px;
-  color: #808080;
+  color: #000000;
   line-height: 1.2;
   text-align: right;
 
@@ -295,11 +275,10 @@ iframe {
   width: 80px;
 }
 
-/*---------------------------------------------*/
 .input100 {
   font-family: Poppins-Regular;
   font-size: 15px;
-  color: #555555;
+  color: #000000;
   line-height: 1.2;
 
   display: block;
@@ -347,9 +326,6 @@ input.input100 {
 .has-val.input100 + .focus-input100::before {
   width: 100%;
 }
-
-/*==================================================================
-[ Restyle Checkbox ]*/
 
 .input-checkbox100 {
   display: none;
@@ -399,8 +375,6 @@ input.input100 {
   color: #36a0ca;
 }
 
-/*------------------------------------------------------------------
-[ Button ]*/
 .container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
@@ -412,17 +386,11 @@ input.input100 {
 }
 
 .login100-form-btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
   min-width: 160px;
   height: 50px;
-  background-color: #36a0ca;
   border-radius: 25px;
 
   font-family: Poppins-Regular;
