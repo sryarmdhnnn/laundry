@@ -48,7 +48,7 @@ $data = ambildata($conn, $query);
                                         <div class="btn-group" role="group" aria-label="Basic example">
                                             <a href="pelanggan_edit.php?id=<?= $member['id_member']; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Detail" class="btn btn-primary"><i class="fa fa-eye"></i></a>
-                                            <a href="pengguna_hapus.php?id=<?= $member['id_member']; ?>" onclick="return confirm('Yakin hapus data ? ');" data-toggle="tooltip" data-placement="bottom" title="Hapus" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                            <a href="hapuspelanggan.php?id=<?= $member['id_member']; ?>" onclick="return confirm('Yakin hapus data ? ');" data-toggle="tooltip" data-placement="bottom" title="Hapus" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                         </div>
                                     </td>
                                 </tr>

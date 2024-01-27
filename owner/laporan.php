@@ -2,21 +2,22 @@
 $title = 'laporan';
 require 'functions.php';
 require 'layout_header.php';
-$outlet_id = $_SESSION['outlet_id'];
-$bulan = ambilsatubaris($conn,"SELECT SUM(total_harga) AS total FROM detail_transaksi INNER JOIN transaksi ON transaksi.id_transaksi = detail_transaksi.transaksi_id WHERE status_bayar = 'dibayar' AND MONTH(tgl_pembayaran) = MONTH(NOW())");
-$tahun = ambilsatubaris($conn,"SELECT SUM(total_harga) AS total FROM detail_transaksi INNER JOIN transaksi ON transaksi.id_transaksi = detail_transaksi.transaksi_id WHERE status_bayar = 'dibayar' AND YEAR(tgl_pembayaran) = YEAR(NOW())");
-$minggu = ambilsatubaris($conn,"SELECT SUM(total_harga) AS total FROM detail_transaksi INNER JOIN transaksi ON transaksi.id_transaksi = detail_transaksi.transaksi_id WHERE status_bayar = 'dibayar' AND WEEK(tgl_pembayaran) = WEEK(NOW())");
+$id_outlet = $_SESSION['id_outlet'];
+$bulan = ambilsatubaris($conn, "SELECT SUM(total_harga) AS total FROM detail_transaksi INNER JOIN transaksi ON transaksi.id_transaksi = detail_transaksi.id_transaksi WHERE status_bayar = 'dibayar' AND MONTH(tgl_pembayaran) = MONTH(NOW())");
+$tahun = ambilsatubaris($conn, "SELECT SUM(total_harga) AS total FROM detail_transaksi INNER JOIN transaksi ON transaksi.id_transaksi = detail_transaksi.id_transaksi WHERE status_bayar = 'dibayar' AND YEAR(tgl_pembayaran) = YEAR(NOW())");
+$minggu = ambilsatubaris($conn, "SELECT SUM(total_harga) AS total FROM detail_transaksi INNER JOIN transaksi ON transaksi.id_transaksi = detail_transaksi.id_transaksi WHERE status_bayar = 'dibayar' AND WEEK(tgl_pembayaran) = WEEK(NOW())");
 
 
-$penjualan = ambildata($conn,"SELECT SUM(detail_transaksi.total_harga) AS total,COUNT(detail_transaksi.paket_id) as jumlah_paket,paket.nama_paket,transaksi.tgl_pembayaran FROM detail_transaksi
-INNER JOIN transaksi ON transaksi.id_transaksi = detail_transaksi.transaksi_id
-INNER JOIN paket ON paket.id_paket = detail_transaksi.paket_id
-WHERE transaksi.status_bayar = 'dibayar' AND paket.outlet_id = '$outlet_id' GROUP BY detail_transaksi.paket_id");
+$penjualan = ambildata($conn, "SELECT SUM(detail_transaksi.total_harga) AS total,COUNT(detail_transaksi.id_paket) as jumlah_paket,paket.nama_paket,transaksi.tgl_pembayaran FROM detail_transaksi
+INNER JOIN transaksi ON transaksi.id_transaksi = detail_transaksi.id_transaksi
+INNER JOIN paket ON paket.id_paket = detail_transaksi.id_paket
+WHERE transaksi.status_bayar = 'dibayar' AND paket.id_outlet = '$id_outlet' GROUP BY detail_transaksi.id_paket");
 ?>
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Dashboard</h4> </div>
+            <h4 class="page-title">Dashboard</h4>
+        </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="#">Dashboard</a></li>
@@ -74,13 +75,14 @@ WHERE transaksi.status_bayar = 'dibayar' AND paket.outlet_id = '$outlet_id' GROU
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $no=1; foreach($penjualan as $transaksi): ?>
+                            <?php $no = 1;
+                            foreach ($penjualan as $transaksi) : ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
                                     <td><?= $transaksi['nama_paket'] ?></td>
                                     <td><?= $transaksi['jumlah_paket'] ?></td>
                                     <td><?= $transaksi['tgl_pembayaran'] ?></td>
-                                    <td><?= $transaksi['total'] ?></td>                                    
+                                    <td><?= $transaksi['total'] ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -92,4 +94,4 @@ WHERE transaksi.status_bayar = 'dibayar' AND paket.outlet_id = '$outlet_id' GROU
 </div>
 <?php
 require 'layout_footer.php';
-?> 
+?>
