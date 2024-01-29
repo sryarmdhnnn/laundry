@@ -2,14 +2,13 @@
 $title = 'transaksi';
 require 'functions.php';
 require 'layout_header.php';
-$query = "SELECT transaksi.*,member.nama_member , detail_transaksi.total_harga FROM transaksi INNER JOIN member ON member.id_member = transaksi.id_member INNER JOIN detail_transaksi ON detail_transaksi.id_transaksi = transaksi.id_transaksi ";
-$data = ambildata($conn, $query);
-?>
+$query = "SELECT transaksi.*,member.nama_member , detail_transaksi.total_harga FROM transaksi INNER JOIN member ON member.id_member = transaksi.member_id INNER JOIN detail_transaksi ON detail_transaksi.transaksi_id = transaksi.id_transaksi ";
+$data = ambildata($conn,$query);
+?> 
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Data Master <?= $title ?></h4>
-        </div>
+            <h4 class="page-title">Data Master <?= $title ?></h4> </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="#">Paket</a></li>
@@ -23,7 +22,7 @@ $data = ambildata($conn, $query);
                 <div class="row">
                     <div class="col-md-6">
                         <a href="transaksi_cari_member.php" class="btn btn-primary box-title"><i class="fa fa-plus fa-fw"></i> Tambah</a>
-                        <a href="transaksi_konfirmasi.php" class="btn btn-primary box-title"><i class="fa fa-check fa-fw"></i> Konfirmasi Pembayaran</a>
+                         <a href="transaksi_konfirmasi.php" class="btn btn-primary box-title"><i class="fa fa-check fa-fw"></i> Konfirmasi Pembayaran</a>
                     </div>
                     <div class="col-md-6 text-right">
                         <button id="btn-refresh" class="btn btn-primary box-title text-right" title="Refresh Data"><i class="fa fa-refresh" id="ic-refresh"></i></button>
@@ -43,7 +42,7 @@ $data = ambildata($conn, $query);
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($data as $transaksi) : ?>
+                            <?php foreach($data as $transaksi): ?>
                                 <tr>
                                     <td></td>
                                     <td><?= $transaksi['kode_invoice'] ?></td>
@@ -52,7 +51,7 @@ $data = ambildata($conn, $query);
                                     <td><?= $transaksi['status_bayar'] ?></td>
                                     <td><?= $transaksi['total_harga'] ?></td>
                                     <td align="center">
-                                        <a href="transaksi_detail.php?id=<?= $transaksi['id_transaksi']; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-success btn-block">Detail</a>
+                                          <a href="transaksi_detail.php?id=<?= $transaksi['id_transaksi']; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-success btn-block">Detail</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -66,8 +65,8 @@ $data = ambildata($conn, $query);
     <!-- table -->
     <!-- ============================================================== -->
     <div class="row">
-
+        
     </div>
 </div>
 <?php
-require 'layout_footer.php';
+require'layout_footer.php';

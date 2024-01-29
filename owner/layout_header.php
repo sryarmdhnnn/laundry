@@ -30,13 +30,16 @@
     <link rel="stylesheet" type="text/css" href="../assets/DataTables/datatables.min.css"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    [if lt IE 9]>
+    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]
+<![endif]-->
 </head>
 
 <body class="fix-header">
+    <!-- ============================================================== -->
+    <!-- Preloader -->
+    <!-- ============================================================== -->
     <?php if($title=='dashboard'){?>
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
@@ -44,7 +47,13 @@
         </svg>
     </div>
     <?php }?>
-   <div id="wrapper">
+    <!-- ============================================================== -->
+    <!-- Wrapper -->
+    <!-- ============================================================== -->
+    <div id="wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
                 <div class="top-left-part">
@@ -70,7 +79,14 @@
                     </li>
                 </ul>
             </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
         </nav>
+        <!-- End Top Navigation -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                 <div class="sidebar-head">
@@ -90,4 +106,10 @@
             </div>
             
         </div>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar -->
+        <!-- ============================================================== -->
+               <!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
         <div id="page-wrapper">

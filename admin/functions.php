@@ -1,49 +1,50 @@
-<?php 
+<?php
 session_start();
 
-if($_SESSION){
-    if($_SESSION['role'] == 'admin'){
-
-    }else{
+if ($_SESSION) {
+    if ($_SESSION['role'] == 'admin') {
+    } else {
         header('location:../index.php');
     }
-}else{
+} else {
     header('location:../index.php');
 }
 
-$conn = mysqli_connect('localhost','root','','laundry');
+$conn = mysqli_connect('localhost', 'root', '', 'laundry');
 
-function ambildata($conn,$query){
-    $data = mysqli_query($conn,$query);
+function ambildata($conn, $query)
+{
+    $data = mysqli_query($conn, $query);
     if (mysqli_num_rows($data) > 0) {
-        while($row = mysqli_fetch_assoc($data)){
-        $hasil[] = $row;
-    }
+        while ($row = mysqli_fetch_assoc($data)) {
+            $hasil[] = $row;
+        }
 
-    return $hasil;
+        return $hasil;
     }
 }
 
-function bisa($conn,$query){
-    $db = mysqli_query($conn,$query);
+function bisa($conn, $query)
+{
+    $db = mysqli_query($conn, $query);
 
-    if($db){
+    if ($db) {
         return 1;
-    }else{
+    } else {
         return 0;
     }
 }
 
 
 
-function ambilsatubaris($conn,$query){
-    $db = mysqli_query($conn,$query);
+function ambilsatubaris($conn, $query)
+{
+    $db = mysqli_query($conn, $query);
     return mysqli_fetch_assoc($db);
 }
 
-function hapus($where,$table,$redirect){
+function hapus($where, $table, $redirect)
+{
     $query = 'DELETE FROM ' . $table . ' WHERE ' . $where;
     echo $query;
 }
-
-?>

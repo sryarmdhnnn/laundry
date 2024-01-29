@@ -2,14 +2,13 @@
 $title = 'transaksi';
 require 'functions.php';
 require 'layout_header.php';
-$query = 'SELECT transaksi.*,member.nama_member , detail_transaksi.total_harga FROM transaksi INNER JOIN member ON member.id_member = transaksi.id_member INNER JOIN detail_transaksi ON detail_transaksi.id_transaksi = transaksi.id_transaksi WHERE transaksi.id_transaksi = ' . $_GET['id'];
-$data = ambilsatubaris($conn, $query);
-?>
+$query = 'SELECT transaksi.*,member.nama_member , detail_transaksi.total_harga FROM transaksi INNER JOIN member ON member.id_member = transaksi.member_id INNER JOIN detail_transaksi ON detail_transaksi.transaksi_id = transaksi.id_transaksi WHERE transaksi.id_transaksi = ' . $_GET['id'];
+$data = ambilsatubaris($conn,$query);
+?> 
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Data Master <?= $title ?></h4>
-        </div>
+            <h4 class="page-title">Data Master <?= $title ?></h4> </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="#">Paket</a></li>
@@ -45,8 +44,8 @@ $data = ambilsatubaris($conn, $query);
     <!-- table -->
     <!-- ============================================================== -->
     <div class="row">
-
+        
     </div>
 </div>
 <?php
-require 'layout_footer.php';
+require'layout_footer.php';

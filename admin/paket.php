@@ -2,14 +2,13 @@
 $title = 'paket';
 require 'functions.php';
 require 'layout_header.php';
-$query = 'SELECT outlet.nama_outlet ,paket.* FROM paket INNER JOIN outlet ON paket.id_outlet = outlet.id_outlet';
-$data = ambildata($conn, $query);
-?>
+$query = 'SELECT outlet.nama_outlet ,paket.* FROM paket INNER JOIN outlet ON paket.outlet_id = outlet.id_outlet';
+$data = ambildata($conn,$query);
+?> 
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Data Master <?= htmlspecialchars($title); ?></h4>
-        </div>
+            <h4 class="page-title">Data Master <?= htmlspecialchars($title); ?></h4> </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="#">Paket</a></li>
@@ -41,7 +40,7 @@ $data = ambildata($conn, $query);
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($data as $paket) : ?>
+                            <?php foreach($data as $paket): ?>
                                 <tr>
                                     <td></td>
                                     <td><?= htmlspecialchars($paket['nama_paket']); ?></td>
@@ -50,8 +49,8 @@ $data = ambildata($conn, $query);
                                     <td><?= htmlspecialchars($paket['nama_outlet']); ?></td>
                                     <td align="center">
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                            <a href="paket_edit.php?id=<?= htmlspecialchars($paket['id_paket']); ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-success"><i class="fa fa-edit"></i></a>
-                                            <a href="paket_hapus.php?id=<?= htmlspecialchars($paket['id_paket']); ?>" onclick="return confirm('Yakin hapus data ? ');" data-toggle="tooltip" data-placement="bottom" title="Hapus" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                          <a href="paket_edit.php?id=<?= htmlspecialchars($paket['id_paket']); ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-success"><i class="fa fa-edit"></i></a>
+                                          <a href="paket_hapus.php?id=<?= htmlspecialchars($paket['id_paket']); ?>" onclick="return confirm('Yakin hapus data ? ');" data-toggle="tooltip" data-placement="bottom" title="Hapus" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -66,8 +65,8 @@ $data = ambildata($conn, $query);
     <!-- table -->
     <!-- ============================================================== -->
     <div class="row">
-
+        
     </div>
 </div>
 <?php
-require 'layout_footer.php';
+require'layout_footer.php';
