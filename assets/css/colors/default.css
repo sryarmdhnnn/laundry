@@ -34,11 +34,8 @@ body {
 .logo i {
   color: #ffffff;
 }
-.navbar-header {
-  background: #41b3f9;
-}
 .navbar-top-links > li > a {
-  color: #ffffff;
+  color: rebeccapurple;
 }
 .sidebar .sidebar-head {
   background: #ffffff;
@@ -63,10 +60,10 @@ body {
   background: #01c0c8;
 }
 #side-menu li a {
-  color: #54667a;
+  color: #ffffff;
 }
 #side-menu li a {
-  color: #54667a;
+  color: #ffffff;
   border-left: 0px solid #fff;
 }
 #side-menu > li > a {
@@ -78,8 +75,8 @@ body {
 }
 #side-menu > li > a.active {
   background: transperant;
-  color: #54667a;
-  border-left: 3px solid #41b3f9;
+  color: lightsteelblue;
+  border-left: 3px solid #ffffff;
   font-weight: 500;
 }
 #side-menu ul > li > a:hover {

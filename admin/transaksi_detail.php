@@ -26,14 +26,7 @@ require'layout_header.php';
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Data Master Transaksi</h4> </div>
-        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-            <ol class="breadcrumb">
-                <li><a href="outlet.php">Transaksi</a></li>
-                <li><a href="#">Tambah Transaksi</a></li>
-            </ol>
-        </div>
-        <!-- /.col-lg-12 -->
+            <h4 class="page-title">Data Transaksi</h4> </div>
     </div>
     <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -106,7 +99,7 @@ require'layout_header.php';
                         <small>Klik Tombol Ubah Untuk Menyimpan Perubahan Transaksi</small>
                     </div>
                 <div class="text-right">
-                    <button type="submit" name="btn-simpan" class="btn btn-primary">Ubah</button>
+                    <button type="submit" name="btn-simpan" class="btn btn-warning">Ubah</button>
                 </div>
                 </form>
             </div>

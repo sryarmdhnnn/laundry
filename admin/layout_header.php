@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/plugins/images/favicon.png">
-    <title>Aplikasi Penglolaan Laundry</title>
+    <title>SRD LAUNDRY</title>
     <!-- Bootstrap Core CSS -->
     <link href="../assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
@@ -28,18 +28,9 @@
     <link href="../assets/css/colors/default.css" id="theme" rel="stylesheet">
     <!-- DataTables -->
     <link rel="stylesheet" type="text/css" href="../assets/DataTables/datatables.min.css"/>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
 </head>
 
 <body class="fix-header">
-    <!-- ============================================================== -->
-    <!-- Preloader -->
-    <!-- ============================================================== -->
     <?php if($title=='dashboard'){?>
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
@@ -47,25 +38,17 @@
         </svg>
     </div>
     <?php }?>
-    <!-- ============================================================== -->
-    <!-- Wrapper -->
-    <!-- ============================================================== -->
     <div id="wrapper">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
-                <div class="top-left-part">
-                    <!-- Logo -->
+                <div class="top-left-part bg-primary">
                     <a class="logo" href="index.php">
-                        <!-- Logo icon image, you can use font-icon also -->
-                        <b style="color:black">
-                            LAUNDRY
+                        <b style="color:white">
+                            SRD
                         </b>
                         <!-- Logo text image you can use text also -->
-                        <span class="hidden-xs text-dark">
-                            APP
+                        <span class="hidden-xs text-light">
+                            LAUNDRY
                         </span> 
                     </a>
                 </div>
@@ -75,19 +58,12 @@
                         <a class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
                     </li>
                     <li>
-                        <a class="profile-pic" href="#"> <img src="../assets/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">ADMIN</b></a>
+                        <a class="profile-pic" href="#"><b class="hidden-xs">ADMIN</b></a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-header -->
-            <!-- /.navbar-top-links -->
-            <!-- /.navbar-static-side -->
         </nav>
-        <!-- End Top Navigation -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <div class="navbar-default sidebar" role="navigation">
+        <div class="navbar-default sidebar bg-primary" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                 <div class="sidebar-head">
                     <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
@@ -121,10 +97,4 @@
             </div>
             
         </div>
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar -->
-        <!-- ============================================================== -->
-               <!-- ============================================================== -->
-        <!-- Page Content -->
-        <!-- ============================================================== -->
         <div id="page-wrapper">

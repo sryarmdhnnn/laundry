@@ -8,13 +8,7 @@ $data = ambildata($conn,$query);
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Data Master <?= $title ?></h4> </div>
-        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-            <ol class="breadcrumb">
-                <li><a href="#">Paket</a></li>
-            </ol>
-        </div>
-        <!-- /.col-lg-12 -->
+            <h4 class="page-title">Data <?= $title ?></h4> </div>
     </div>
     <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -22,10 +16,10 @@ $data = ambildata($conn,$query);
                 <div class="row">
                     <div class="col-md-6">
                         <a href="transaksi_cari_member.php" class="btn btn-primary box-title"><i class="fa fa-plus fa-fw"></i> Tambah</a>
-                         <a href="transaksi_konfirmasi.php" class="btn btn-primary box-title"><i class="fa fa-check fa-fw"></i> Konfirmasi Pembayaran</a>
+                         <a href="transaksi_konfirmasi.php" class="btn btn-success box-title"><i class="fa fa-check fa-fw"></i> Konfirmasi Pembayaran</a>
                     </div>
                     <div class="col-md-6 text-right">
-                        <button id="btn-refresh" class="btn btn-primary box-title text-right" title="Refresh Data"><i class="fa fa-refresh" id="ic-refresh"></i></button>
+                        <button id="btn-refresh" class="btn btn-dark box-title text-right" title="Refresh Data"><i class="fa fa-refresh" id="ic-refresh"></i></button>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -51,7 +45,7 @@ $data = ambildata($conn,$query);
                                     <td><?= $transaksi['status_bayar'] ?></td>
                                     <td><?= $transaksi['total_harga'] ?></td>
                                     <td align="center">
-                                          <a href="transaksi_detail.php?id=<?= $transaksi['id_transaksi']; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-success btn-block">Detail</a>
+                                          <a href="transaksi_detail.php?id=<?= $transaksi['id_transaksi']; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-info btn-block">Detail</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
