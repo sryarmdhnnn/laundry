@@ -27,26 +27,20 @@
     <!-- color CSS -->
     <link href="../assets/css/colors/default.css" id="theme" rel="stylesheet">
     <!-- DataTables -->
-    <link rel="stylesheet" type="text/css" href="../assets/DataTables/datatables.min.css"/>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <link rel="stylesheet" type="text/css" href="../assets/DataTables/datatables.min.css" />
 </head>
 
 <body class="fix-header">
     <!-- ============================================================== -->
     <!-- Preloader -->
     <!-- ============================================================== -->
-    <?php if($title=='dashboard'){?>
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-        </svg>
-    </div>
-    <?php }?>
+    <?php if ($title == 'dashboard') { ?>
+        <div class="preloader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    <?php } ?>
     <!-- ============================================================== -->
     <!-- Wrapper -->
     <!-- ============================================================== -->
@@ -66,7 +60,7 @@
                         <!-- Logo text image you can use text also -->
                         <span class="hidden-xs text-dark">
                             APP
-                        </span> 
+                        </span>
                     </a>
                 </div>
                 <!-- /Logo -->
@@ -97,22 +91,26 @@
                         <a href="transaksi.php" class="waves-effect"><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i> Transaksi</a>
                     </li>
                     <li>
-                        <a href="pelanggan.php" class="waves-effect <?php if($title=='pelanggan'){echo 'active';}?>"><i class="fa fa-users fa-fw" aria-hidden="true"></i> Pelanggan</a>
+                        <a href="pelanggan.php" class="waves-effect <?php if ($title == 'pelanggan') {
+                                                                        echo 'active';
+                                                                    } ?>"><i class="fa fa-users fa-fw" aria-hidden="true"></i> Pelanggan</a>
                     </li>
                     <li>
-                        <a href="laporan.php" class="waves-effect <?php if($title=='laporan'){echo 'active';}?>"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Laporan</a>
+                        <a href="laporan.php" class="waves-effect <?php if ($title == 'laporan') {
+                                                                        echo 'active';
+                                                                    } ?>"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Laporan</a>
                     </li>
                 </ul>
                 <div class="center p-20">
-                     <a href="logout.php" class="btn btn-danger btn-block waves-effect waves-light">Logout</a>
-                 </div>
+                    <a href="logout.php" class="btn btn-danger btn-block waves-effect waves-light">Logout</a>
+                </div>
             </div>
-            
+
         </div>
         <!-- ============================================================== -->
         <!-- End Left Sidebar -->
         <!-- ============================================================== -->
-               <!-- ============================================================== -->
+        <!-- ============================================================== -->
         <!-- Page Content -->
         <!-- ============================================================== -->
         <div id="page-wrapper">

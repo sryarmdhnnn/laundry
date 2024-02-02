@@ -27,17 +27,17 @@
     <!-- color CSS -->
     <link href="../assets/css/colors/default.css" id="theme" rel="stylesheet">
     <!-- DataTables -->
-    <link rel="stylesheet" type="text/css" href="../assets/DataTables/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/DataTables/datatables.min.css" />
 </head>
 
 <body class="fix-header">
-    <?php if($title=='dashboard'){?>
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-        </svg>
-    </div>
-    <?php }?>
+    <?php if ($title == 'dashboard') { ?>
+        <div class="preloader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    <?php } ?>
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
@@ -49,7 +49,7 @@
                         <!-- Logo text image you can use text also -->
                         <span class="hidden-xs text-light">
                             LAUNDRY
-                        </span> 
+                        </span>
                     </a>
                 </div>
                 <!-- /Logo -->
@@ -70,31 +70,43 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="index.php" class="waves-effect <?php if($title=='dashboard'){echo 'active';} ?>"><i class="fa fa-tachometer fa-fw" aria-hidden="true"></i>Dashboard</a>
+                        <a href="index.php" class="waves-effect <?php if ($title == 'dashboard') {
+                                                                    echo 'active';
+                                                                } ?>"><i class="fa fa-tachometer fa-fw" aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="outlet.php" class="waves-effect <?php if($title=='outlet'){echo 'active';} ?>"><i class="fa fa-suitcase fa-fw" aria-hidden="true"></i> Outlet</a>
+                        <a href="outlet.php" class="waves-effect <?php if ($title == 'outlet') {
+                                                                        echo 'active';
+                                                                    } ?>"><i class="fa fa-suitcase fa-fw" aria-hidden="true"></i> Outlet</a>
                     </li>
                     <li>
-                        <a href="paket.php" class="waves-effect <?php if($title=='paket'){echo 'active';} ?>"><i class="fa fa-archive fa-fw" aria-hidden="true"></i> Paket</a>
+                        <a href="paket.php" class="waves-effect <?php if ($title == 'paket') {
+                                                                    echo 'active';
+                                                                } ?>"><i class="fa fa-archive fa-fw" aria-hidden="true"></i> Paket</a>
                     </li>
                     <li>
-                        <a href="pengguna.php" class="waves-effect <?php if($title=='pengguna'){echo 'active';} ?>"><i class="fa fa-user fa-fw" aria-hidden="true"></i> Pengguna</a>
+                        <a href="pengguna.php" class="waves-effect <?php if ($title == 'pengguna') {
+                                                                        echo 'active';
+                                                                    } ?>"><i class="fa fa-user fa-fw" aria-hidden="true"></i> Pengguna</a>
                     </li>
                     <li>
-                        <a href="pelanggan.php" class="waves-effect <?php if($title=='pelanggan'){echo 'active';}?>"><i class="fa fa-users fa-fw" aria-hidden="true"></i> Pelanggan</a>
+                        <a href="pelanggan.php" class="waves-effect <?php if ($title == 'pelanggan') {
+                                                                        echo 'active';
+                                                                    } ?>"><i class="fa fa-users fa-fw" aria-hidden="true"></i> Pelanggan</a>
                     </li>
                     <li>
                         <a href="transaksi.php" class="waves-effect"><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i> Transaksi</a>
                     </li>
                     <li>
-                        <a href="laporan.php" class="waves-effect <?php if($title=='laporan'){echo 'active';}?>"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Laporan</a>
+                        <a href="laporan.php" class="waves-effect <?php if ($title == 'laporan') {
+                                                                        echo 'active';
+                                                                    } ?>"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Laporan</a>
                     </li>
                 </ul>
                 <div class="center p-20">
-                     <a href="logout.php" class="btn btn-danger btn-block waves-effect waves-light">Logout</a>
-                 </div>
+                    <a href="logout.php" class="btn btn-danger btn-block waves-effect waves-light">Logout</a>
+                </div>
             </div>
-            
+
         </div>
         <div id="page-wrapper">
