@@ -9,24 +9,15 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/plugins/images/favicon.png">
     <title>SRD LAUNDRY</title>
-    <!-- Bootstrap Core CSS -->
     <link href="../assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Menu CSS -->
     <link href="../assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
-    <!-- toast CSS -->
     <link href="../assets/plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
-    <!-- morris CSS -->
     <link href="../assets/plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
-    <!-- chartist CSS -->
     <link href="../assets/plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
     <link href="../assets/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
-    <!-- animation CSS -->
     <link href="../assets/css/animate.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link href="../assets/css/style.css" rel="stylesheet">
-    <!-- color CSS -->
     <link href="../assets/css/colors/default.css" id="theme" rel="stylesheet">
-    <!-- DataTables -->
     <link rel="stylesheet" type="text/css" href="../assets/DataTables/datatables.min.css" />
 </head>
 
@@ -46,13 +37,11 @@
                         <b style="color:white">
                             SRD
                         </b>
-                        <!-- Logo text image you can use text also -->
                         <span class="hidden-xs text-light">
                             LAUNDRY
                         </span>
                     </a>
                 </div>
-                <!-- /Logo -->
                 <ul class="nav navbar-top-links navbar-right pull-right">
                     <li>
                         <a class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
@@ -104,7 +93,7 @@
                     </li>
                 </ul>
                 <div class="center p-20">
-                    <a href="logout.php" class="btn btn-danger btn-block waves-effect waves-light">Logout</a>
+                    <a href="logout.php" class="btn btn-danger btn-block waves-effect waves-light">LOGOUT</a>
                 </div>
             </div>
 

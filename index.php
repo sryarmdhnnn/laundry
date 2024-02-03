@@ -18,7 +18,6 @@
 </head>
 
 <body>
-
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -55,7 +54,6 @@
 			</div>
 		</div>
 	</div>
-
 	<script src="assets/login/vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="assets/login/vendor/animsition/js/animsition.min.js"></script>
 	<script src="assets/login/vendor/bootstrap/js/popper.js"></script>

@@ -1,5 +1,5 @@
 <?php
-$title = 'pengguna';
+$title = 'pelanggan';
 require 'functions.php';
 
 if (isset($_POST['btn-simpan'])) {
@@ -28,7 +28,7 @@ require 'layout_header.php';
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Data Pengguna</h4>
+            <h4 class="page-title">Data Pelanggan</h4>
         </div>
     </div>
     <div class="row">
@@ -36,10 +36,10 @@ require 'layout_header.php';
             <div class="white-box">
                 <div class="row">
                     <div class="col-md-6">
-                        <a href=":pelanggan.php" class="btn btn-secondary box-title"><i class="fa fa-arrow-left fa-fw"></i> Kembali</a>
+                        <a href="pelanggan.php" class="btn btn-secondary box-title"><i class="fa fa-arrow-left fa-fw"></i> Kembali</a>
                     </div>
                     <div class="col-md-6 text-right">
-                        <button id="btn-refresh" class="btn btn-primary box-title text-right" title="Refresh Data"><i class="fa fa-refresh" id="ic-refresh"></i></button>
+                        <button id="btn-refresh" class="btn btn-dark box-title text-right" title="Refresh Data"><i class="fa fa-refresh" id="ic-refresh"></i></button>
                     </div>
                 </div>
             </div>
@@ -73,8 +73,8 @@ require 'layout_header.php';
                         </select>
                     </div>
                     <div class="text-right">
-                        <button type="reset" class="btn btn-danger">Reset</button>
-                        <button type="submit" name="btn-simpan" class="btn btn-success">Simpan</button>
+                        <button type="reset" class="btn btn-danger"><i class="fa fa-refresh"></i> RESET</button>
+                        <button type="submit" name="btn-simpan" class="btn btn-success"><i class="fa fa-save"></i> SIMPAN</button>
                     </div>
                 </form>
             </div>

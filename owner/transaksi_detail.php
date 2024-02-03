@@ -1,7 +1,7 @@
 <?php
 require 'functions.php';
-$status = ['baru', 'proses', 'selesai', 'diambil'];
-$query = "SELECT transaksi.*,member.nama_member , detail_transaksi.*,outlet.nama_outlet,paket.nama_paket FROM transaksi INNER JOIN member ON member.id_member = transaksi.id_member INNER JOIN detail_transaksi ON detail_transaksi.id_transaksi = transaksi.id_transaksi INNER JOIN outlet ON outlet.id_outlet = transaksi.id_outlet INNER JOIN paket ON paket.id_outlet = transaksi.id_outlet  WHERE transaksi.id_transaksi=" . $_GET['id'];
+$status = ['Baru', 'Proses', 'Selesai', 'Diambil'];
+$query = "SELECT transaksi.*,member.nama_member , detail_transaksi.*,outlet.nama_outlet,paket.nama_paket FROM transaksi INNER JOIN member ON member.id_member = transaksi.member_id INNER JOIN detail_transaksi ON detail_transaksi.transaksi_id = transaksi.id_transaksi INNER JOIN outlet ON outlet.id_outlet = transaksi.outlet_id INNER JOIN paket ON paket.outlet_id = transaksi.outlet_id  WHERE transaksi.id_transaksi=" . $_GET['id'];
 $data = ambilsatubaris($conn, $query);
 
 if (isset($_POST['btn-simpan'])) {
@@ -25,22 +25,15 @@ require 'layout_header.php';
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Data Master Transaksi</h4>
+            <h4 class="page-title">Data Transaksi</h4>
         </div>
-        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-            <ol class="breadcrumb">
-                <li><a href="outlet.php">Transaksi</a></li>
-                <li><a href="#">Tambah Transaksi</a></li>
-            </ol>
-        </div>
-        <!-- /.col-lg-12 -->
     </div>
     <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
             <div class="white-box">
                 <div class="row">
                     <div class="col-md-6">
-                        <a href="javascript:void(0)" onclick="window.history.back();" class="btn btn-primary box-title"><i class="fa fa-arrow-left fa-fw"></i> Kembali</a>
+                        <a href="index.php" class="btn btn-secondary box-title"><i class="fa fa-arrow-left fa-fw"></i> Kembali</a>
                     </div>
                 </div>
             </div>
@@ -51,7 +44,7 @@ require 'layout_header.php';
             <div class="white-box">
                 <form method="post" action="">
                     <div class="form-group">
-                        <label>Kode Invoice</label>
+                        <label>Kode Pesanan</label>
                         <input type="text" name="kode_invoice" class="form-control" readonly="" value="<?= $data['kode_invoice'] ?>">
                     </div>
                     <div class="form-group">
@@ -95,18 +88,7 @@ require 'layout_header.php';
                     <?php endif; ?>
                     <div class="form-group">
                         <label>Status Transaksi</label>
-                        <select name="status" class="form-control">
-                            <?php foreach ($status as $key) : ?>
-                                <?php if ($key == $data['status']) : ?>
-                                    <option value="<?= $key ?>" selected><?= $key ?></option>
-                                <?php endif ?>
-                                <option value="<?= $key ?>"><?= $key ?></option>
-                            <?php endforeach ?>
-                        </select>
-                        <small>Klik Tombol Ubah Untuk Menyimpan Perubahan Transaksi</small>
-                    </div>
-                    <div class="text-right">
-                        <button type="submit" name="btn-simpan" class="btn btn-primary">Ubah</button>
+                        <input readonly="" type="text" name="biaya_tambahan" class="form-control" value="<?= $data['status'] ?>">
                     </div>
                 </form>
             </div>
