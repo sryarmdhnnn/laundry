@@ -28,7 +28,7 @@ $data = ambilsatubaris($conn, $query);
                         <h3>Pesanan Atas Nama <?= $data['nama_member'] ?> Behasil Di Simpan</h3>
                         <strong>Kode Pesanan <?= $data['kode_invoice'] ?></strong><br>
                         <strong>Total Pembayaran <?= $data['total_harga'] ?></strong><br><br>
-                        <a href="transaksi.php" class="btn btn-warning fa fa-arrow-left"> Kembali Ke Menu Utama</a>
+                        <a href="transaksi.php" class="btn btn-warning"><i class="fa fa-arrow-left"></i> Kembali Ke Menu Utama</a>
                     </div>
                 </div>
 
