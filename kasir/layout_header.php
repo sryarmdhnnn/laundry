@@ -32,7 +32,7 @@
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
-                <div class="top-left-part bg-gradient">
+                <div class="top-left-part bg-primary">
                     <a class="logo" href="index.php">
                         <b style="color:white">
                             SRD
@@ -52,7 +52,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="navbar-default sidebar bg-gradient" role="navigation">
+        <div class="navbar-default sidebar bg-primary" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                 <div class="sidebar-head">
                     <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>

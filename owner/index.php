@@ -78,7 +78,7 @@ $data = ambildata($conn, $query);
                                     <td><?= $transaksi['status_bayar'] ?></td>
                                     <td><?= $transaksi['total_harga'] ?></td>
                                     <td align="center">
-                                        <a href="transaksi_detail.php?id=<?= $transaksi['id_transaksi']; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-success btn-block">Detail</a>
+                                        <a href="transaksi_detail.php?id=<?= $transaksi['id_transaksi']; ?>" data-toggle="tooltip" data-placement="bottom" title="Detail" class="btn btn-info btn-block">Detail</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
