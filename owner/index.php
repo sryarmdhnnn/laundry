@@ -15,7 +15,17 @@ $data = ambildata($conn, $query);
         </div>
     </div>
     <div class="row">
-
+    <div class="col-lg-4 col-sm-6 col-xs-12">
+            <div class="white-box analytics-info">
+                <h3 class="box-title">Oulet</h3>
+                <ul class="list-inline two-part">
+                    <li>
+                        <div id="sparklinedash"></div>
+                    </li>
+                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $joutlet['jumlahoutlet'] ?></span></li>
+                </ul>
+            </div>
+        </div>
         <div class="col-lg-4 col-sm-6 col-xs-12">
             <div class="white-box analytics-info">
                 <h3 class="box-title">Pelanggan</h3>
@@ -24,17 +34,6 @@ $data = ambildata($conn, $query);
                         <div id="sparklinedash2"></div>
                     </li>
                     <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $jPelanggan['jumlahmember'] ?></span></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-            <div class="white-box analytics-info">
-                <h3 class="box-title">Oulet</h3>
-                <ul class="list-inline two-part">
-                    <li>
-                        <div id="sparklinedash"></div>
-                    </li>
-                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $joutlet['jumlahoutlet'] ?></span></li>
                 </ul>
             </div>
         </div>
