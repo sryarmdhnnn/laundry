@@ -8,7 +8,7 @@ if($exe){
     $title = 'Berhasil';
     $message = 'Menghapus Data';
     $type = 'success';
-    header('location: pengguna.php?crud='.$success.'&msg='.$message.'&type='.$type.'&title='.$title);
+    header('location: transaksi.php?crud='.$success.'&msg='.$message.'&type='.$type.'&title='.$title);
 }
  ?>
 

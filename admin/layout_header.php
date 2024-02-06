@@ -47,7 +47,7 @@
                         <a class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
                     </li>
                     <li>
-                        <a class="profile-pic" href="#"><b class="hidden-xs">ADMIN</b></a>
+                        <a class="profile-pic" href="#"><img src="../assets/plugins/images/admin-logo-dark.png" alt=""><b class="hidden-xs">ADMIN</b></a>
                     </li>
                 </ul>
             </div>
