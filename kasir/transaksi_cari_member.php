@@ -46,7 +46,7 @@ $data = ambildata($conn, $query);
                                     <td><?= $member['telp_member'] ?></td>
                                     <td><?= $member['no_ktp'] ?></td>
                                     <td align="center">
-                                        <a href="transaksi_cari_outlet.php?id=<?= $member['id_member']; ?>" data-toggle="tooltip" data-placement="bottom" title="Pilih" class="btn btn-primary btn-block"> Pilih</a>
+                                        <a href="transaksi_cari_outlet.php?id=<?= $member['id_member']; ?>" data-toggle="tooltip" data-placement="bottom" title="Pilih" class="btn btn-primary btn-block"> PILIH</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

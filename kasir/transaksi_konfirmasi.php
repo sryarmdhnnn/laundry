@@ -43,7 +43,7 @@ $data = ambildata($conn, $query);
                                     <td><?= $transaksi['status'] ?></td>
                                     <td><?= $transaksi['total_harga'] ?></td>
                                     <td align="center">
-                                        <a href="transaksi_bayar.php?id=<?= $transaksi['id_transaksi']; ?>" data-toggle="tooltip" data-placement="bottom" title="Pilih" class="btn btn-primary btn-block"> Pilih</a>
+                                        <a href="transaksi_bayar.php?id=<?= $transaksi['id_transaksi']; ?>" data-toggle="tooltip" data-placement="bottom" title="Pilih" class="btn btn-primary btn-block"> PILIH</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

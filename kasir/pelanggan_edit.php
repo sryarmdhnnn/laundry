@@ -72,10 +72,10 @@ require 'layout_header.php';
                     <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <select name="jenis_kelamin" class="form-control">
-                            <option value="L" <?php if ($edit['jenis_kelamin']  == 'L') {
+                            <option value="Laki-Laki" <?php if ($edit['jenis_kelamin']  == 'Laki-Laki') {
                                                     echo "selected";
                                                 } ?>>Laki-laki</option>
-                            <option value="P" <?php if ($edit['jenis_kelamin']  == 'P') {
+                            <option value="Perempuan" <?php if ($edit['jenis_kelamin']  == 'Perempuan') {
                                                     echo "selected";
                                                 } ?>>Perempuan</option>
                         </select>
