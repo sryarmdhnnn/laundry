@@ -62,8 +62,8 @@ require 'layout_header.php';
                         <input type="number" name="telp_outlet" class="form-control">
                     </div>
                     <div class="text-right">
-                        <button type="reset" class="btn btn-danger">Reset</button>
-                        <button type="submit" name="btn-simpan" class="btn btn-success">Simpan</button>
+                        <button type="reset" class="btn btn-danger"><i class="fa fa-refresh"></i> RESET</button>
+                        <button type="submit" name="btn-simpan" class="btn btn-success"><i class="fa fa-save"></i> SIMPAN</button>
                     </div>
                 </form>
             </div>

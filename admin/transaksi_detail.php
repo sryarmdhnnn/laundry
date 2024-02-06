@@ -99,7 +99,7 @@ require 'layout_header.php';
                         <small>Klik Tombol Ubah Untuk Menyimpan Perubahan Transaksi</small>
                     </div>
                     <div class="text-right">
-                        <button type="submit" name="btn-simpan" class="btn btn-warning"><i class="fa fa-edit"></i> Ubah</button>
+                        <button type="submit" name="btn-simpan" class="btn btn-warning"><i class="fa fa-edit"></i> UBAH</button>
                     </div>
                 </form>
             </div>

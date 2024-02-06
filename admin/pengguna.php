@@ -2,7 +2,7 @@
 $title = 'pengguna';
 require 'functions.php';
 require 'layout_header.php';
-$query = 'SELECT * FROM user order by role desc';
+$query = 'SELECT * FROM user';
 $data = ambildata($conn,$query);
 ?> 
 <div class="container-fluid">

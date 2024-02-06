@@ -43,7 +43,7 @@ function ambilsatubaris($conn, $query)
     return mysqli_fetch_assoc($db);
 }
 
-function hapus($where, $table, $redirect)
+function hapus($where, $table, $redirect, $conn, $query)
 {
     $query = 'DELETE FROM ' . $table . ' WHERE ' . $where;
     echo $query;

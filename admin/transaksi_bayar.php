@@ -69,7 +69,7 @@ require 'layout_header.php';
                         <?php endif ?>
                     </div>
                     <div class="text-right">
-                        <button type="submit" name="btn-simpan" id="btn-simpan" class="btn btn-primary">Bayar</utton>
+                        <button type="submit" name="btn-simpan" id="btn-simpan" class="btn btn-primary"><i class="fa fa-money"></i> BAYAR</utton>
                     </div>
                 </form>
             </div>

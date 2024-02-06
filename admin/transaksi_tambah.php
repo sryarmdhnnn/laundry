@@ -7,7 +7,7 @@ $batas_waktu  = date("Y-m-d h:i:s", $tujuh_hari);
 
 
 
-$invoice   = 'DRY' . Date('Ymdsi');
+$invoice   = 'SRDDRY' . Date('Ymdsi');
 $outlet_id = $_GET['outlet_id'];
 $user_id   = $_SESSION['user_id'];
 $member_id = $_GET['id'];
@@ -17,11 +17,8 @@ $member = ambilsatubaris($conn, 'SELECT nama_member from member WHERE id_member 
 $paket = ambildata($conn, 'SELECT * FROM paket WHERE outlet_id = ' . $outlet_id);
 if (isset($_POST['btn-simpan'])) {
     $kode_invoice = $_POST['kode_invoice'];
-    $biaya_tambahan = $_POST['biaya_tambahan'];
-    $diskon = $_POST['diskon'];
-    $pajak = $_POST['pajak'];
 
-    $query = "INSERT INTO transaksi (outlet_id,kode_invoice,member_id,tgl,batas_waktu,biaya_tambahan,diskon,pajak,status,status_bayar,user_id) VALUES ('$outlet_id','$kode_invoice','$member_id','$tgl_sekarang','$batas_waktu','$biaya_tambahan','$diskon','$pajak','baru','belum','$user_id')";
+    $query = "INSERT INTO transaksi (outlet_id,kode_invoice,member_id,tgl,batas_waktu,status,status_bayar,user_id) VALUES ('$outlet_id','$kode_invoice','$member_id','$tgl_sekarang','$batas_waktu','Baru','Belum','$user_id')";
 
     $execute = bisa($conn, $query);
     if ($execute == 1) {

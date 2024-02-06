@@ -2,7 +2,7 @@
 $title = 'paket';
 require 'functions.php';
 
-$jenis = ['kiloan', 'selimut', 'bedcover', 'kaos', 'lain'];
+$jenis = ['Kiloan', 'Selimut', 'Bedcover', 'Kaos', 'Levis'];
 
 $id_paket = stripslashes($_GET['id']);
 $queryedit = "SELECT * FROM paket WHERE id_paket = '$id_paket'";
@@ -90,8 +90,8 @@ require 'layout_header.php';
                     </div>
 
                     <div class="text-right">
-                        <button type="reset" class="btn btn-danger"><i class="fa fa-refresh"> RESET</i></button>
-                        <button type="submit" name="btn-simpan" class="btn btn-success"><i class="fa fa-save"> SIMPAN</i></button>
+                        <button type="reset" class="btn btn-danger"><i class="fa fa-refresh"></i> RESET</button>
+                        <button type="submit" name="btn-simpan" class="btn btn-success"><i class="fa fa-save"></i> SIMPAN</button>
                     </div>
                 </form>
             </div>
