@@ -27,11 +27,11 @@ $data = ambildata($conn, $query);
                     <table class="table table-bordered thead-dark" id="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th width="5%">#</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>Telepon</th>
-                                <th width="15%">Aksi</th>
+                                <th width="2%">No</th>
+                                <th width="30%">Nama Outlet</th>
+                                <th width="29%">Alamat</th>
+                                <th width="29%">Telepon</th>
+                                <th width="10%">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>

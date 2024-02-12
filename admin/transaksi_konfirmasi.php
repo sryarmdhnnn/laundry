@@ -8,7 +8,7 @@ $data = ambildata($conn, $query);
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Data <?= $title ?></h4>
+            <h4 class="page-title">Konfirmasi <?= $title ?></h4>
         </div>
     </div>
     <div class="row">
@@ -26,18 +26,18 @@ $data = ambildata($conn, $query);
                     <table class="table table-bordered thead-dark" id="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th>#</th>
-                                <th>Invoice</th>
-                                <th>Member</th>
-                                <th>Status</th>
-                                <th>Total Harga</th>
-                                <th width="15%">Aksi</th>
+                                <th width="2%">No</th>
+                                <th width="22%">kode Pesanan</th>
+                                <th width="22%">Nama Member</th>
+                                <th width="22%">Status</th>
+                                <th width="22%">Total Harga</th>
+                                <th width="10%">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($data as $transaksi) : ?>
                                 <tr>
-                                    <td></td>
+                                    <td align="center"></td>
                                     <td><?= $transaksi['kode_invoice'] ?></td>
                                     <td><?= $transaksi['nama_member'] ?></td>
                                     <td><?= $transaksi['status'] ?></td>

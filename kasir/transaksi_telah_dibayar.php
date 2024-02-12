@@ -30,7 +30,7 @@ $data = ambilsatubaris($conn, $query);
                         <strong>Total Pembayaran Rp.<?= $data['total_harga'] ?></strong><br>
                         <strong>Total Uang Bayar Rp.<?= $data['total_bayar'] ?></strong><br>
                         <strong>Kembalian Rp.<?= $data['total_bayar'] - $data['total_harga'] ?></strong><br><br>
-                        <a href="transaksi.php" class="btn btn-warning"><i class="fa fa-arrow-left"></i>KEMBALI KE MENU UTAMA</a>
+                        <a href="transaksi.php" class="btn btn-warning"><i class="fa fa-arrow-left"></i> KEMBALI KE MENU UTAMA</a>
                     </div>
                 </div>
 

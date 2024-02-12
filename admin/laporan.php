@@ -24,7 +24,7 @@ WHERE transaksi.status_bayar = 'dibayar' GROUP BY detail_transaksi.paket_id");
                 <h3 class="box-title">Penghasilan Minggu Ini</h3>
                 <ul class="list-inline two-part">
                     <li>
-                        <div id="sparklinedash3"></div>
+                        <div id=""></div>
                     </li>
                     <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= htmlspecialchars($minggu['total']); ?></span></li>
                 </ul>
@@ -35,7 +35,7 @@ WHERE transaksi.status_bayar = 'dibayar' GROUP BY detail_transaksi.paket_id");
                 <h3 class="box-title">Penghasilan Bulan ini</h3>
                 <ul class="list-inline two-part">
                     <li>
-                        <div id="sparklinedash2"></div>
+                        <div id=""></div>
                     </li>
                     <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= htmlspecialchars($bulan['total']); ?></span></li>
                 </ul>
@@ -46,7 +46,7 @@ WHERE transaksi.status_bayar = 'dibayar' GROUP BY detail_transaksi.paket_id");
                 <h3 class="box-title">Penghasilan Tahun Ini</h3>
                 <ul class="list-inline two-part">
                     <li>
-                        <div id="sparklinedash"></div>
+                        <div id=""></div>
                     </li>
                     <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= htmlspecialchars($tahun['total']); ?></span></li>
                 </ul>
@@ -61,18 +61,18 @@ WHERE transaksi.status_bayar = 'dibayar' GROUP BY detail_transaksi.paket_id");
                     <table class="table" id="table">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Nama Paket</th>
-                                <th>Jumlah Transaksi</th>
-                                <th>Tanggal Transaksi</th>
-                                <th>Total Hasil</th>
+                                <th width="2%">No</th>
+                                <th width="25%">Nama Paket</th>
+                                <th width="25%">Jumlah Transaksi</th>
+                                <th width="25%">Tanggal Transaksi</th>
+                                <th width="23%">Total Hasil</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $no = 1;
                             foreach ($penjualan as $transaksi) : ?>
                                 <tr>
-                                    <td><?= $no++ ?></td>
+                                    <td align="center"><?= $no++ ?></td>
                                     <td><?= htmlspecialchars($transaksi['nama_paket']); ?></td>
                                     <td><?= htmlspecialchars($transaksi['jumlah_paket']); ?></td>
                                     <td><?= htmlspecialchars($transaksi['tgl_pembayaran']); ?></td>

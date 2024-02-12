@@ -31,7 +31,7 @@ require 'layout_header.php';
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Data Pengguna</h4>
+            <h4 class="page-title">Tambah Pengguna</h4>
         </div>
     </div>
     <div class="row">
@@ -82,7 +82,7 @@ require 'layout_header.php';
                     </div>
                     <div class="text-right">
                         <button type="reset" class="btn btn-danger"><i class="fa fa-refresh"></i> RESET</button>
-                        <button type="submit" name="btn-simpan" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+                        <button type="submit" name="btn-simpan" class="btn btn-success"><i class="fa fa-save"></i> SIMPAN</button>
                     </div>
                 </form>
             </div>

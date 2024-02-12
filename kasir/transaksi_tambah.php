@@ -2,8 +2,8 @@
 $title = 'pengguna';
 require 'functions.php';
 $tgl_sekarang = Date('Y-m-d h:i:s');
-$tujuh_hari   = mktime(0, 0, 0, date("n"), date("j") + 7, date("Y"));
-$batas_waktu  = date("Y-m-d h:i:s", $tujuh_hari);
+$empatbelas_hari   = mktime(0, 0, 0, date("n"), date("j") + 7, date("Y"));
+$batas_waktu  = date("Y-m-d h:i:s", $empatbelas_hari);
 
 
 
@@ -47,7 +47,7 @@ require 'layout_header.php';
 <div class="container-fluid">
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Data Transaksi</h4>
+            <h4 class="page-title">Tambah Transaksi</h4>
         </div>
     </div>
     <div class="row">

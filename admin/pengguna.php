@@ -25,25 +25,23 @@ $data = ambildata($conn,$query);
                     <table class="table table-bordered thead-dark" id="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th width="5%">#</th>
-                                <th>Nama</th>
-                                <th>Username</th>
-                                <th>Role</th>
-                                <th width="15%">Aksi</th>
+                                <th width="2%">No</th>
+                                <th width="30%">Nama Pengguna</th>
+                                <th width="29%">Username</th>
+                                <th width="29%">Peran</th>
+                                <th width="10%">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach($data as $user): ?>
                                 <tr>
-                                    <td></td>
+                                    <td align="center"></td>
                                     <td><?= $user['nama_user'] ?></td>
                                     <td><?= $user['username'] ?></td>
                                     <td><?= $user['role'] ?></td>
                                     <td align="center">
-                                        <div class="btn-group" role="group" aria-label="Basic example">
                                           <a href="pengguna_edit.php?id=<?= $user['id_user']; ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                                           <a href="pengguna_hapus.php?id=<?= $user['id_user']; ?>" onclick="return confirm('Yakin hapus data ? ');" data-toggle="tooltip" data-placement="bottom" title="Hapus" class="btn btn-danger"><i class="fa fa-trash"></i></a>
-                                        </div>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

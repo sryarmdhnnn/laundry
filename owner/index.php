@@ -5,7 +5,7 @@ require 'layout_header.php';
 $jTransaksi = ambilsatubaris($conn, 'SELECT COUNT(id_transaksi) as jumlahtransaksi FROM transaksi');
 $jPelanggan = ambilsatubaris($conn, 'SELECT COUNT(id_member) as jumlahmember FROM member');
 $joutlet = ambilsatubaris($conn, 'SELECT COUNT(id_outlet) as jumlahoutlet FROM outlet');
-$query = "SELECT transaksi.*,member.nama_member , detail_transaksi.total_harga FROM transaksi INNER JOIN member ON member.id_member = transaksi.member_id INNER JOIN detail_transaksi ON detail_transaksi.transaksi_id = transaksi.id_transaksi   ORDER BY transaksi.id_transaksi DESC LIMIT 10";
+$query = "SELECT transaksi.*,member.nama_member, detail_transaksi.total_harga FROM transaksi INNER JOIN member ON member.id_member = transaksi.member_id INNER JOIN detail_transaksi ON detail_transaksi.transaksi_id = transaksi.id_transaksi   ORDER BY transaksi.id_transaksi DESC LIMIT 20";
 $data = ambildata($conn, $query);
 ?>
 <div class="container-fluid">
@@ -15,14 +15,14 @@ $data = ambildata($conn, $query);
         </div>
     </div>
     <div class="row">
-    <div class="col-lg-4 col-sm-6 col-xs-12">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
             <div class="white-box analytics-info">
                 <h3 class="box-title">Oulet</h3>
                 <ul class="list-inline two-part">
                     <li>
-                        <div id="sparklinedash"></div>
+                        <div id=""></div>
                     </li>
-                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $joutlet['jumlahoutlet'] ?></span></li>
+                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= htmlspecialchars($joutlet['jumlahoutlet']); ?></span></li>
                 </ul>
             </div>
         </div>
@@ -31,9 +31,9 @@ $data = ambildata($conn, $query);
                 <h3 class="box-title">Pelanggan</h3>
                 <ul class="list-inline two-part">
                     <li>
-                        <div id="sparklinedash2"></div>
+                        <div id=""></div>
                     </li>
-                    <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $jPelanggan['jumlahmember'] ?></span></li>
+                    <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= htmlspecialchars($jPelanggan['jumlahmember']); ?></span></li>
                 </ul>
             </div>
         </div>
@@ -42,9 +42,9 @@ $data = ambildata($conn, $query);
                 <h3 class="box-title">Transaksi</h3>
                 <ul class="list-inline two-part">
                     <li>
-                        <div id="sparklinedash3"></div>
+                        <div id=""></div>
                     </li>
-                    <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $jTransaksi['jumlahtransaksi'] ?></span></li>
+                    <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= htmlspecialchars($jTransaksi['jumlahtransaksi']); ?></span></li>
                 </ul>
             </div>
         </div>
@@ -52,18 +52,18 @@ $data = ambildata($conn, $query);
     <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12">
             <div class="white-box">
-                <h3 class="box-title">10 Transaksi Terbaru</h3>
+                <h3 class="box-title">20 Transaksi Terbaru</h3>
                 <div class="table-responsive">
                     <table class="table ">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Invoice</th>
-                                <th>Member</th>
+                                <th>No</th>
+                                <th>Kode Pesanan</th>
+                                <th>Nama Member</th>
                                 <th>Status</th>
                                 <th>Pemabayaran</th>
                                 <th>Total Harga</th>
-                                <th width="15%">Aksi</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -71,13 +71,13 @@ $data = ambildata($conn, $query);
                             foreach ($data as $transaksi) : ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
-                                    <td><?= $transaksi['kode_invoice'] ?></td>
-                                    <td><?= $transaksi['nama_member'] ?></td>
-                                    <td><?= $transaksi['status'] ?></td>
-                                    <td><?= $transaksi['status_bayar'] ?></td>
-                                    <td><?= $transaksi['total_harga'] ?></td>
+                                    <td><?= htmlspecialchars($transaksi['kode_invoice']); ?></td>
+                                    <td><?= htmlspecialchars($transaksi['nama_member']); ?></td>
+                                    <td><?= htmlspecialchars($transaksi['status']); ?></td>
+                                    <td><?= htmlspecialchars($transaksi['status_bayar']); ?></td>
+                                    <td><?= htmlspecialchars($transaksi['total_harga']); ?></td>
                                     <td align="center">
-                                        <a href="transaksi_detail.php?id=<?= $transaksi['id_transaksi']; ?>" data-toggle="tooltip" data-placement="bottom" title="Detail" class="btn btn-info btn-block">Detail</a>
+                                        <a href="transaksi_detail.php?id=<?= htmlspecialchars($transaksi['id_transaksi']); ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-warning btn-block"><i class="fa fa-edit"></i> EDIT</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

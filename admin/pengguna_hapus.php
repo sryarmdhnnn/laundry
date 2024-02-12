@@ -11,4 +11,3 @@ if($exe){
     header('location: pengguna.php?crud='.$success.'&msg='.$message.'&type='.$type.'&title='.$title);
 }
  ?>
-

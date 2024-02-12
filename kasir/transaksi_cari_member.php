@@ -27,19 +27,19 @@ $data = ambildata($conn, $query);
                     <table class="table table-bordered thead-dark" id="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th width="5%">#</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Telepon</th>
-                                <th>NIK</th>
-                                <th width="15%">Aksi</th>
+                                <th width="2%">No</th>
+                                <th width="18%">Nama Pelanggan</th>
+                                <th width="18%">Alamat</th>
+                                <th width="18%">Jenis Kelamin</th>
+                                <th width="17%">Telepon</th>
+                                <th width="17%">NIK</th>
+                                <th width="10%">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($data as $member) : ?>
                                 <tr>
-                                    <td></td>
+                                    <td align="center"></td>
                                     <td><?= $member['nama_member'] ?></td>
                                     <td><?= $member['alamat_member'] ?></td>
                                     <td><?= $member['jenis_kelamin'] ?></td>

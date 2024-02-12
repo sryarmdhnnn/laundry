@@ -27,19 +27,19 @@ $data = ambildata($conn, $query);
                     <table class="table table-bordered thead-dark" id="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th>#</th>
-                                <th>Invoice</th>
-                                <th>Member</th>
-                                <th>Status</th>
-                                <th>Pemabayaran</th>
-                                <th>Total Harga</th>
-                                <th width="15%">Aksi</th>
+                                <th width="2%">No</th>
+                                <th width="18%">Invoice</th>
+                                <th width="18%">Member</th>
+                                <th width="18%">Status</th>
+                                <th width="17%">Pemabayaran</th>
+                                <th width="17%">Total Harga</th>
+                                <th width="10%">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($data as $transaksi) : ?>
                                 <tr>
-                                    <td></td>
+                                    <td align="center"></td>
                                     <td><?= $transaksi['kode_invoice'] ?></td>
                                     <td><?= $transaksi['nama_member'] ?></td>
                                     <td><?= $transaksi['status'] ?></td>

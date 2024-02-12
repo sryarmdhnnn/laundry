@@ -25,27 +25,25 @@ $data = ambildata($conn,$query);
                     <table class="table table-bordered thead-dark" id="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th>#</th>
-                                <th>Nama Paket</th>
-                                <th>Jenis</th>
-                                <th>Harga</th>
-                                <th>Outlet</th>
-                                <th width="15%">Aksi</th>
+                                <th width="2%">No</th>
+                                <th width="28%">Nama Paket</th>
+                                <th width="20%">Jenis Paket</th>
+                                <th width="20%">Harga</th>
+                                <th width="20%">Outlet</th>
+                                <th width="10%">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach($data as $paket): ?>
                                 <tr>
-                                    <td></td>
+                                    <td align="center"></td>
                                     <td><?= htmlspecialchars($paket['nama_paket']); ?></td>
                                     <td><?= htmlspecialchars($paket['jenis_paket']); ?></td>
                                     <td><?= htmlspecialchars($paket['harga']); ?></td>
                                     <td><?= htmlspecialchars($paket['nama_outlet']); ?></td>
                                     <td align="center">
-                                        <div class="btn-group" role="group" aria-label="Basic example">
                                           <a href="paket_edit.php?id=<?= htmlspecialchars($paket['id_paket']); ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                                           <a href="paket_hapus.php?id=<?= htmlspecialchars($paket['id_paket']); ?>" onclick="return confirm('Yakin hapus data ? ');" data-toggle="tooltip" data-placement="bottom" title="Hapus" class="btn btn-danger"><i class="fa fa-trash"></i></a>
-                                        </div>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

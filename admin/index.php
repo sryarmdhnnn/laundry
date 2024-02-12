@@ -5,7 +5,7 @@ require 'layout_header.php';
 $jTransaksi = ambilsatubaris($conn, 'SELECT COUNT(id_transaksi) as jumlahtransaksi FROM transaksi');
 $jPelanggan = ambilsatubaris($conn, 'SELECT COUNT(id_member) as jumlahmember FROM member');
 $joutlet = ambilsatubaris($conn, 'SELECT COUNT(id_outlet) as jumlahoutlet FROM outlet');
-$query = "SELECT transaksi.*,member.nama_member , detail_transaksi.total_harga FROM transaksi INNER JOIN member ON member.id_member = transaksi.member_id INNER JOIN detail_transaksi ON detail_transaksi.transaksi_id = transaksi.id_transaksi   ORDER BY transaksi.id_transaksi DESC LIMIT 10";
+$query = "SELECT transaksi.*,member.nama_member, detail_transaksi.total_harga FROM transaksi INNER JOIN member ON member.id_member = transaksi.member_id INNER JOIN detail_transaksi ON detail_transaksi.transaksi_id = transaksi.id_transaksi   ORDER BY transaksi.id_transaksi DESC LIMIT 20";
 $data = ambildata($conn, $query);
 ?>
 <div class="container-fluid">
@@ -20,7 +20,7 @@ $data = ambildata($conn, $query);
                 <h3 class="box-title">Oulet</h3>
                 <ul class="list-inline two-part">
                     <li>
-                        <div id="sparklinedash"></div>
+                        <div id=""></div>
                     </li>
                     <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= htmlspecialchars($joutlet['jumlahoutlet']); ?></span></li>
                 </ul>
@@ -31,7 +31,7 @@ $data = ambildata($conn, $query);
                 <h3 class="box-title">Pelanggan</h3>
                 <ul class="list-inline two-part">
                     <li>
-                        <div id="sparklinedash2"></div>
+                        <div id=""></div>
                     </li>
                     <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= htmlspecialchars($jPelanggan['jumlahmember']); ?></span></li>
                 </ul>
@@ -42,7 +42,7 @@ $data = ambildata($conn, $query);
                 <h3 class="box-title">Transaksi</h3>
                 <ul class="list-inline two-part">
                     <li>
-                        <div id="sparklinedash3"></div>
+                        <div id=""></div>
                     </li>
                     <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= htmlspecialchars($jTransaksi['jumlahtransaksi']); ?></span></li>
                 </ul>
@@ -52,18 +52,18 @@ $data = ambildata($conn, $query);
     <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12">
             <div class="white-box">
-                <h3 class="box-title">10 Transaksi Terbaru</h3>
+                <h3 class="box-title">20 Transaksi Terbaru</h3>
                 <div class="table-responsive">
                     <table class="table ">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Invoice</th>
-                                <th>Member</th>
+                                <th>No</th>
+                                <th>Kode Pesanan</th>
+                                <th>Nama Member</th>
                                 <th>Status</th>
                                 <th>Pemabayaran</th>
                                 <th>Total Harga</th>
-                                <th width="15%">Aksi</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
