@@ -9,10 +9,9 @@ $edit = ambilsatubaris($conn, $queryedit);
 if (isset($_POST['btn-simpan'])) {
     $nama     = $_POST['nama_member'];
     $alamat_member = $_POST['alamat_member'];
-    $no_ktp     = $_POST['no_ktp'];
     $telp_member     = $_POST['telp_member'];
     $jenis_kelamin     = $_POST['jenis_kelamin'];
-    $query = "UPDATE member SET nama_member = '$nama', alamat_member = '$alamat_member', no_ktp = '$no_ktp', telp_member = '$telp_member', jenis_kelamin = '$jenis_kelamin' WHERE id_member ='$id_member'";
+    $query = "UPDATE member SET nama_member = '$nama', alamat_member = '$alamat_member', telp_member = '$telp_member', jenis_kelamin = '$jenis_kelamin' WHERE id_member ='$id_member'";
 
     $execute = bisa($conn, $query);
     if ($execute == 1) {
@@ -53,10 +52,6 @@ require 'layout_header.php';
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
             <div class="white-box">
                 <form method="post" action="">
-                    <div class="form-group">
-                        <label>No KTP Member</label>
-                        <input type="text" name="no_ktp" class="form-control" value="<?= $edit['no_ktp'] ?>">
-                    </div>
                     <div class="form-group">
                         <label>Nama Member</label>
                         <input type="text" name="nama_member" class="form-control" value="<?= $edit['nama_member'] ?>">

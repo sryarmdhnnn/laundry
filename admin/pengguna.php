@@ -28,7 +28,7 @@ $data = ambildata($conn,$query);
                                 <th width="2%">No</th>
                                 <th width="30%">Nama Pengguna</th>
                                 <th width="29%">Username</th>
-                                <th width="29%">Peran</th>
+                                <th width="29%">Sebagai</th>
                                 <th width="10%">Aksi</th>
                             </tr>
                         </thead>

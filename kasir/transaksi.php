@@ -28,10 +28,10 @@ $data = ambildata($conn, $query);
                         <thead class="thead-dark">
                             <tr>
                                 <th width="2%">No</th>
-                                <th width="18%">Invoice</th>
+                                <th width="18%">Kode Pesanan</th>
                                 <th width="18%">Member</th>
                                 <th width="18%">Status</th>
-                                <th width="17%">Pemabayaran</th>
+                                <th width="17%">Pembayaran</th>
                                 <th width="17%">Total Harga</th>
                                 <th width="10%">Aksi</th>
                             </tr>

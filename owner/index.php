@@ -57,28 +57,24 @@ $data = ambildata($conn, $query);
                     <table class="table ">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Kode Pesanan</th>
-                                <th>Nama Member</th>
-                                <th>Status</th>
-                                <th>Pemabayaran</th>
-                                <th>Total Harga</th>
-                                <th></th>
+                                <th width="2%">No</th>
+                                <th width="22%">Kode Pesanan</th>
+                                <th width="22%">Nama Member</th>
+                                <th width="22%">Status</th>
+                                <th width="22%">Pemabayaran</th>
+                                <th width="10%">Total Harga</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $no = 1;
                             foreach ($data as $transaksi) : ?>
                                 <tr>
-                                    <td><?= $no++ ?></td>
+                                    <td align="center"><?= $no++ ?></td>
                                     <td><?= htmlspecialchars($transaksi['kode_invoice']); ?></td>
                                     <td><?= htmlspecialchars($transaksi['nama_member']); ?></td>
                                     <td><?= htmlspecialchars($transaksi['status']); ?></td>
                                     <td><?= htmlspecialchars($transaksi['status_bayar']); ?></td>
                                     <td><?= htmlspecialchars($transaksi['total_harga']); ?></td>
-                                    <td align="center">
-                                        <a href="transaksi_detail.php?id=<?= htmlspecialchars($transaksi['id_transaksi']); ?>" data-toggle="tooltip" data-placement="bottom" title="Edit" class="btn btn-warning btn-block"><i class="fa fa-edit"></i> EDIT</a>
-                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

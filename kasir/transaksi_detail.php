@@ -57,7 +57,7 @@ require 'layout_header.php';
                     </div>
                     <div class="form-group">
                         <label>Jenis Paket</label>
-                        <input type="text" name="nama_paket" class="form-control" readonly="" value="<?= $data['nama_paket'] ?>">
+                        <input readonly="" type="text" name="nama_paket" class="form-control" value="<?= $data['nama_paket'] ?>">
                     </div>
                     <div class="form-group">
                         <label>Jumlah</label>

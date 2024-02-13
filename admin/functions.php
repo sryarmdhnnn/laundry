@@ -19,7 +19,6 @@ function ambildata($conn, $query)
         while ($row = mysqli_fetch_assoc($data)) {
             $hasil[] = $row;
         }
-
         return $hasil;
     }
 }
